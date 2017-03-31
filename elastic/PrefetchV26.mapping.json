@@ -1,0 +1,193 @@
+{
+    "mappings": {
+        "prefetch": {
+            "properties": {
+                "source_file": {
+                    "type": "text"
+                },
+                "header": {
+                    "properties": {
+                        "version": {
+                            "type": "long"
+                        },
+                        "signature": {
+                            "type": "long"
+                        },
+                        "unknown1": {
+                            "type": "long"
+                        },
+                        "filesize": {
+                            "type": "long"
+                        },
+                        "filename": {
+                            "type": "text"
+                        },
+                        "hash": {
+                            "type": "long"
+                        },
+                        "unknon2": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "fileinfo": {
+                    "properties": {
+                        "metrics_array_offset": {
+                            "type": "long"
+                        },
+                        "metrics_entry_count": {
+                            "type": "long"
+                        },
+                        "metrics_entry_count": {
+                            "type": "long"
+                        },
+                        "trace_array_offset": {
+                            "type": "long"
+                        },
+                        "trace_entry_count": {
+                            "type": "long"
+                        },
+                        "filename_offset": {
+                            "type": "long"
+                        },
+                        "filename_length": {
+                            "type": "long"
+                        },
+                        "volume_info_offset": {
+                            "type": "long"
+                        },
+                        "volume_info_count": {
+                            "type": "long"
+                        },
+                        "volume_info_size": {
+                            "type": "long"
+                        },
+                        "unknown3": {
+                            "type": "long"
+                        },
+                        "last_run_time": {
+                            "type": "date",
+                            "format": "yyyy-MM-dd HH:mm:ss.SSSSSS||yyyy-MM-dd HH:mm:ss.SSS||yyyy-MM-dd HH:mm:ss"
+                        },
+                        "unknown1": {
+                            "type": "text"
+                        },
+                        "run_count": {
+                            "type": "long"
+                        },
+                        "unknown2": {
+                            "type": "long"
+                        },
+                        "unknown5": {
+                            "type": "long"
+                        },
+                        "unknown4": {
+                            "type": "text"
+                        }
+                    }
+                },
+                "metrics": {
+                    "properties": {
+                        "tracechain_index": {
+                            "type": "long"
+                        },
+                        "tracechain_count": {
+                            "type": "long"
+                        },
+                        "unknown4": {
+                            "type": "long"
+                        },
+                        "filename_offset": {
+                            "type": "long"
+                        },
+                        "filename_length": {
+                            "type": "long"
+                        },
+                        "unknown3": {
+                            "type": "long"
+                        },
+                        "filename": {
+                            "type": "text"
+                        },
+                        "tracechain": {
+                            "properties": {
+                                "block_load_count": {
+                                    "type": "long"
+                                },
+                                "unknown1": {
+                                    "type": "long"
+                                },
+                                "unknown2": {
+                                    "type": "long"
+                                },
+                                "unknown3": {
+                                    "type": "long"
+                                }
+                            }
+                        }
+                    }
+                },
+                "volumes": {
+                    "properties": {
+                        "path_offset": {
+                            "type": "long"
+                        },
+                        "path_length": {
+                            "type": "long"
+                        },
+                        "vol_creation_time": {
+                            "type": "date",
+                            "format": "yyyy-MM-dd HH:mm:ss.SSS||yyyy-MM-dd HH:mm:ss.SSSSS||strict_date_optional_time||epoch_millis"
+                        },
+                        "volume_serial": {
+                            "type": "long"
+                        },
+                        "references_offset": {
+                            "type": "long"
+                        },
+                        "references_data_size": {
+                            "type": "long"
+                        },
+                        "directory_offset": {
+                            "type": "long"
+                        },
+                        "directory_string_count": {
+                            "type": "long"
+                        },
+                        "unknown1": {
+                            "type": "long"
+                        },
+                        "unknown2": {
+                            "type": "text"
+                        },
+                        "unknown3": {
+                            "type": "long"
+                        },
+                        "unknown4": {
+                            "type": "text"
+                        },
+                        "unknown5": {
+                            "type": "long"
+                        },
+                        "path_string": {
+                            "type": "text"
+                        },
+                        "directory_strings": {
+                            "type": "text"
+                        },
+                        "reference_table": {
+                            "properties": {
+                                "version": {
+                                    "type": "long"
+                                },
+                                "reference_count": {
+                                    "type": "long"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
