@@ -82,7 +82,7 @@ def Main():
     arguments = GetArguments()
     options = arguments.parse_args()
 
-    COMMIT_COUNT = 10
+    COMMIT_COUNT = 25
 
     es_handler = None
     if options.esconfig:
@@ -124,6 +124,7 @@ def Main():
 
             if pfcnt == COMMIT_COUNT:
                 es_handler.CommitBulkRecords()
+                pfcnt = 0
 
     if es_handler:
         es_handler.CommitBulkRecords()
