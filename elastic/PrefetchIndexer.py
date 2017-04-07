@@ -46,7 +46,6 @@ def GetArguments():
         '--mapping',
         dest='mapping',
         action="store",
-        required=True,
         type=unicode,
         default=None,
         help='Index Mapping'
@@ -93,13 +92,14 @@ def Main():
         )
 
         # Create index
-        with open(options.mapping,"rb") as fh:
-            mapping = json.load(fh)
-            es_handler.CreateIndex(
-                options.esindex,
-                'prefetch',
-                mapping
-            )
+        if options.mapping:
+            with open(options.mapping,"rb") as fh:
+                mapping = json.load(fh)
+                es_handler.CreateIndex(
+                    options.esindex,
+                    'prefetch',
+                    mapping
+                )
 
     filelist = GetFilelist(options.source)
     pfcnt = 0
