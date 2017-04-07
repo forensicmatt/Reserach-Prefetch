@@ -11,6 +11,12 @@ from elasticsearch.helpers import bulk as es_bulk
 from elasticsearch import helpers
 import pyrpf
 
+logging.getLogger('elasticsearch').setLevel(logging.ERROR)
+
+logging.basicConfig(
+    level=logging.DEBUG
+)
+
 def GetArguments():
     usage = '''Index prefetch files to Elastic'''
 
@@ -171,6 +177,7 @@ class EsHandler():
             ))
             for failed_item in failed_items:
                 logging.error(unicode(failed_item))
+                pass
 
         self.records = []
 
